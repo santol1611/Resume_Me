@@ -4,8 +4,6 @@
 # Mr.Kitsaran (Tong)
 "Hey there! Welcome to my resume project. I put this together to show my skills and what I can bring to the table, making it easier for the HR team and anyone interested to get a feel for what I can do. Hope you enjoy checking it out!"
 
-## 🛠 Skills
+## 🛠 Skills & Framework
 Python,HTML,CSS
-
-## 🛠 Framework
 Django,Bootstap 5
