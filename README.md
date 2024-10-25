@@ -10,3 +10,6 @@
 Python,HTML,CSS
 
 Django,Bootstap 5
+
+
+https://gitmoji.dev/
