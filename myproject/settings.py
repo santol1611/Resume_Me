@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'resume_app',
+    'accounts_app',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Resume_me',               # ชื่อฐานข้อมูล
+        'USER': 'postgres',                # ชื่อผู้ใช้
+        'PASSWORD': '1110200178951',       # รหัสผ่านของผู้ใช้
+        'HOST': 'localhost',               # หรือใส่ที่อยู่ IP ของเซิร์ฟเวอร์
+        'PORT': '5432',                    # พอร์ตของ PostgreSQL (ค่าเริ่มต้นคือ 5432)
     }
 }
 
