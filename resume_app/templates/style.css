@@ -1,0 +1,41 @@
+
+body {
+    background-color: #1c1e26;
+}
+
+.primary-text {
+    color: #d1d1d1;
+}
+
+.accent-color {
+    color: #ff7f50;
+}
+
+/* ตั้งค่าสีพื้นฐาน */
+.hero {
+    background-color: #2b2d42;
+    /* พื้นหลังสีเทาเข้มอมฟ้า */
+    color: #f8f8f2;
+    /* ตัวอักษรสีขาวครีม */
+}
+
+.hero-content h1 {
+    color: #f8f8f2;
+}
+
+.hero-content p {
+    color: #56cfe1;
+    /* สีเน้นฟ้าอมเขียว */
+}
+
+.button {
+    background-color: #ff7f50;
+    color: #2b2d42;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #ff5f30;
+}
