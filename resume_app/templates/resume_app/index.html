@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Resume Me</title>
 
 </head>
 
@@ -241,7 +242,7 @@
                                             </div>
                                             <div class="z-10 sm:order-2 sm:col-span-6">
                                                 <h3><a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
-                                                        href="https://spotify-profile.herokuapp.com/" target="_blank"
+                                                        href="{% url 'accounts_app:index' %}" target="_blank"
                                                         rel="noreferrer noopener"
                                                         aria-label="Spotify Profile (opens in a new tab)"><span
                                                             class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span><span>Spotify<!-- -->
