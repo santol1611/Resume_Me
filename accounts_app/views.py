@@ -6,3 +6,6 @@ def index(request):
 
 def register(request):
     return render(request, "accounts_app/register.html")
+
+def profile(request):
+    return render(request, "accounts_app/profile.html")
