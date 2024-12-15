@@ -10,6 +10,23 @@
 
 <body class="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
 
+    <!-- Notification section (วางตรงนี้ให้แสดงทันทีใต้ header) -->
+    {% if messages %}
+    <div class="p-4 mx-auto max-w-2xl">
+        {% for message in messages %}
+        <div class="alert bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative" role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% elif error %}
+    <div class="p-4 mx-auto max-w-2xl">
+        <div class="alert bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+            {{ error }}
+        </div>
+    </div>
+    {% endif %}
+
     <!------------ Start Login ------------>
     <section>
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -26,8 +43,11 @@
                         class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                         Sign in to your account
                     </h1>
-                    <form class="space-y-4 md:space-y-6" action="#">
 
+                    <!-- แก้ไข action เป็น URL ของฟังก์ชัน login และเปลี่ยน method เป็น POST -->
+                    <form class="space-y-4 md:space-y-6" action="{% url 'accounts_app:login' %}" method="post">
+
+                        {% csrf_token %}
                         <!------------ Input Username ------------>
                         <div>
                             <label for="username"
@@ -46,6 +66,7 @@
                                 required="">
                         </div> <!------------ end input password ------------>
 
+                        <!-- Remember me -->
                         <div class="flex items-center justify-between">
                             <div class="flex items-start">
                                 <div class="flex items-center h-5">
@@ -61,12 +82,15 @@
                                 class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot
                                 password?</a>
                         </div>
+
+                        <!-- Submit Button -->
                         <button type="submit"
                             class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign
                             in</button>
                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                             Don’t have an account yet? <a href="{% url 'accounts_app:register' %}"
-                                class="font-medium text-primary-600 hover:underline dark:text-primary-500"> Go to sign up</a>
+                                class="font-medium text-primary-600 hover:underline dark:text-primary-500"> Go to sign
+                                up</a>
                         </p>
                     </form>
                 </div>
