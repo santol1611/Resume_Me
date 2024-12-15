@@ -7,9 +7,9 @@
 
 
 ## 🛠 Skills & Framework
-Python,HTML,CSS
+Python,HTML,CSS,PostgreSQL
 
-Django,Bootstap 5
+Django,Tailwind
 
 
 https://gitmoji.dev/
